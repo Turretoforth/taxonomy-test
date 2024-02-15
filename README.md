@@ -11,6 +11,7 @@ A swagger is available on [https://localhost:7143/swagger/index.html]()
 The operations currently available are : 
 #### Creation of an employee
 POST [https://localhost:7143/Taxonomy]()
+
 A JSON with this format must be sent:
 ```
 {
@@ -34,11 +35,13 @@ A JSON with this format must be sent:
 If the creation is successful, the details of the newly created employee will be returned.
 #### Getting the direct subordinates of an employee
 GET [https://localhost:7143/Taxonomy/subordinates/\<GUID\>]()
+
 A valid GUID of an existing employee must be given.
 
 A list of the direct subordinates will be returned with all of their details.
 #### Changing the manager of an employee
 POST [https://localhost:7143/Taxonomy/\<GUID\>?newManager=\<GUID\>]()
+
 The first and second GUID must be a valid GUID of an existing employee. 
 The new manager cannot be the employee itself and **the operation cannot currently be done on an employee with subordinates**.
 
